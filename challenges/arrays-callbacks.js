@@ -72,7 +72,7 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 
-zooAnimals.forEach(function (item) {
+zooAnimals.forEach((item) => {
   displayNames.push(
     "Name: " + item.animal_name + ", " + "Scientific: " + item.scientific_name
   );
@@ -88,7 +88,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 const lowCaseAnimalNames = [];
 
-zooAnimals.map(function (item) {
+zooAnimals.map((item) => {
   lowCaseAnimalNames.push(item.animal_name.toLocaleLowerCase());
 });
 
@@ -102,8 +102,9 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 const lowPopulationAnimals = [];
 
-zooAnimals.filter(function (item) {
+zooAnimals.filter((item) => {
   let animal_name = item.animal_name;
+
   if (item.population < 5) {
     lowPopulationAnimals.push(new Object(animal_name));
   }
@@ -157,9 +158,9 @@ function greeting(firstName, lastName) {
 console.log(greeting("Jessica", "Fuller"));
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 /*
 
